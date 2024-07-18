@@ -1,4 +1,4 @@
 name: bundles
-version: '${version}'
+version: '1.0'
 main: dkn.minecraft.Bundles
 api-version: '1.20'
