@@ -8,15 +8,16 @@ import org.bukkit.plugin.java.JavaPlugin
 
 class Bundles : JavaPlugin() {
     override fun onEnable() {
-        val key: NamespacedKey = NamespacedKey(this, "Bundles")
-        val item: ItemStack = ItemStack(Material.BUNDLE)
-        val recipe: ShapedRecipe = ShapedRecipe(key, item).apply {
+        val recipe: ShapedRecipe = ShapedRecipe(
+            NamespacedKey(this, "Bundles"),
+            ItemStack(Material.BUNDLE)
+        ).apply {
             shape(
                 "SLS",
                 "L L",
                 "LLL"
             )
-            setIngredient('N', Material.STRING)
+            setIngredient('S', Material.STRING)
             setIngredient('L', Material.LEATHER)
         }
         getServer().addRecipe(recipe)
